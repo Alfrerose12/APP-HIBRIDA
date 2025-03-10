@@ -25,12 +25,12 @@ export class LoginPage {
     }
   }
 
-  // Usar este código si se va a hacer una petición HTTP
+  // Usar este código si se va a hacer una petición HTTP al servidor para iniciar sesión
   // onSubmit() {
   //   if (this.loginForm.valid) {
   //     const loginData = { email: this.email, password: this.password };
 
-  //     this.http.post('https://tudominio.com/api/login', loginData).subscribe({
+  //     this.http.post('https://odontologia-integral.site/api/login', loginData).subscribe({
   //       next: (response) => {
   //         this.router.navigate(['/tabs/inicio']);
   //         this.loginForm.reset();
