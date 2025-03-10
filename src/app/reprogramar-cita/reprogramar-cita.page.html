@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/tabs/inicio">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <img src="assets/logo_od.png" alt="Logo de la empresa" class="logo-header">
+    </ion-buttons>
+    <ion-title>Reprogramar Cita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <div class="form-header">
+    <h2 id="form-title">Reprograma tu cita</h2>
+    <p id="instruction-text" class="instruction-text">Por favor, selecciona una nueva fecha y hora para reprogramar tu cita.</p>
+  </div>
+
+  <form [formGroup]="reprogramarCitaForm" (ngSubmit)="onSubmit()" class="reprogramar-form">
+    <div class="form-group">
+      <ion-label id="label-date" position="stacked">Selecciona Fecha y Hora</ion-label>
+      <ion-datetime 
+        formControlName="fechaHora" 
+        displayFormat="DD/MM/YYYY hh:mm A" 
+        min="2025-03-01T09:00" 
+        max="2030-12-31T23:00">
+      </ion-datetime>
+    </div>
+
+    <ion-item lines="full">
+      <ion-label id="label-motivo" position="floating">Motivo de Reprogramación</ion-label>
+      <ion-input formControlName="motivo" type="text" placeholder="Escribe el motivo de la reprogramación" id="input-motivo"></ion-input>
+    </ion-item>
+
+    <ion-button id="submit-btn" expand="full" type="submit" [disabled]="!reprogramarCitaForm.valid" class="submit-btn">
+      Reprogramar Cita
+    </ion-button>
+  </form>
+</ion-content>

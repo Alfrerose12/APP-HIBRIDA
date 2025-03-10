@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <img src="assets/logo_od.png" alt="Logo de la empresa">
+      <ion-title class="titulo">Menú de Opciones</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="imagen-container">
+    <ion-title class="title">¿Qué deseas hacer?</ion-title>
+    <img src="assets/ic_pensar.webp" alt="Persona pensando">
+  </div>
+
+  <div class="boton-container">
+    <ion-button expand="full" color="primary" fill="clear" class="boton-imagen" routerLink="/agendar-cita">
+      <div class="boton-contenido">
+        <span class="titulo-boton">Agendar Cita</span>
+        <img src="https://www.generacionuniversitaria.com.mx/wp-content/uploads/2022/11/Beca-Benito-Juarez-2022_-Tienes-hasta-esta-fecha-para-agendar-cita-y-registrarte-1024x631.jpg" alt="Icono opción 1" class="icono-boton">
+      </div>
+    </ion-button>
+    <p class="descripcion">Aquí podrás agendar tu cita, ingresando algunos datos en un breve formulario.</p>
+  </div>
+  
+  <div class="boton-container">
+    <ion-button expand="full" color="secondary" fill="clear" class="boton-imagen" routerLink="/historial-cita">
+      <div class="boton-contenido">
+        <span class="titulo-boton">Historial de Citas</span>
+        <img src="https://puntosfovissste.com/wp-content/uploads/Calendario-de-citas-Fovissste.jpg" alt="Icono opción 2" class="icono-boton">
+      </div>
+    </ion-button>
+    <p class="descripcion">Aquí podrás consultar un historial de todas tus citas.</p>
+  </div>
+</ion-content>

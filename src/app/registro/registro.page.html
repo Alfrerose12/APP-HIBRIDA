@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="container">
+    <div class="logo-container">
+      <ion-img src="/assets/logo_od.png" alt="Logo de la empresa"></ion-img>
+      <ion-title class="main-title">Crear Cuenta</ion-title>
+      <p class="subtitle">Por favor ingresa un correo y una contraseña para crear una cuenta</p>
+    </div>
+
+    <ion-list class="form-container">
+      <div class="input-group">
+        <label class="input-label">Correo Electrónico</label>
+        <ion-item>
+          <ion-input type="email" placeholder="Ejemplo: cliente@example.com" required></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Contraseña</label>
+        <ion-item>
+          <ion-input type="password" placeholder="Ingresa una contraseña" required></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="input-group">
+        <label class="input-label">Confirmar Contraseña</label>
+        <ion-item>
+          <ion-input type="password" placeholder="Ingresa nuevamente la contraseña" required></ion-input>
+        </ion-item>
+      </div>
+    </ion-list>
+
+    <ion-button expand="block" routerLink="/login">Crear Cuenta</ion-button>
+
+  </div>
+</ion-content>

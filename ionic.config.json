@@ -1,0 +1,7 @@
+{
+  "name": "odontologia-integral",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
