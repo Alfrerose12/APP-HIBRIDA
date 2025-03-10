@@ -65,9 +65,24 @@
       <p><strong>Fecha:</strong> 10/03/2025</p>
       <p><strong>Hora:</strong> 15:00</p>
       <p><strong>Estado:</strong> Confirmada</p>
-      <ion-button expand="full" color="primary" routerLink="/reprogramar-cita">Reprogramar Cita</ion-button>
+      
+      <ion-grid>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="6">
+            <ion-button expand="full" color="primary" routerLink="/reprogramar-cita">
+              Reprogramar Cita
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button expand="full" color="primary" routerLink="/agendar-cita">
+              Agendar Nueva Cita
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </ion-card-content>
   </ion-card>
+  
 
   <ion-card>
     <ion-card-header>

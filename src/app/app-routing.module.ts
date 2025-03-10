@@ -45,6 +45,10 @@ const routes: Routes = [
   {
     path: 'promociones',
     loadChildren: () => import('./promociones/promociones.module').then( m => m.PromocionesPageModule)
+  },
+  {
+    path: 'agendar-cita',
+    loadChildren: () => import('./agendar-cita/agendar-cita.module').then( m => m.AgendarCitaPageModule)
   }
 ];
 @NgModule({

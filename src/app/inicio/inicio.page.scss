@@ -127,16 +127,16 @@ ion-item {
 }
 
 ion-icon {
-  color: var(--ion-color-primary, #000); /* Asegura que sean visibles */
+  color: var(--ion-color-primary, #000); 
   font-size: 22px;
 }
 
 ion-item {
-  --color: black; /* Ajusta el color del texto */
+  --color: black;
 }
 
 .logout-item ion-icon {
-  color: red !important; /* Icono de cierre de sesión en rojo */
+  color: red !important; 
 }
 
 .cerrar{

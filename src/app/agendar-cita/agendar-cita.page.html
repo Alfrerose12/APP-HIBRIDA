@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/tabs/inicio">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <img src="assets/logo_od.png" alt="Logo de la empresa" class="logo-header">
+    </ion-buttons>
+    <ion-title>Agendar Nueva Cita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <div class="form-header">
+    <h2 id="form-title">Agendar tu cita</h2>
+    <p id="instruction-text" class="instruction-text">Por favor, selecciona los detalles para agendar tu cita.</p>
+  </div>
+
+  <form [formGroup]="agendarCitaForm" (ngSubmit)="onSubmit()" class="agendar-form">
+    <div class="form-group">
+      <ion-label id="label-date" position="stacked">Selecciona Fecha y Hora</ion-label>
+      <ion-datetime 
+        formControlName="fechaHora" 
+        displayFormat="DD/MM/YYYY hh:mm A" 
+        min="2025-03-01T09:00" 
+        max="2030-12-31T23:00">
+      </ion-datetime>
+    </div>
+
+    <ion-item lines="full">
+      <ion-label id="label-motivo" position="floating">Motivo de la cita</ion-label>
+      <ion-input formControlName="motivo" type="text" placeholder="Escribe el motivo de la cita" id="input-motivo"></ion-input>
+    </ion-item>
+
+    <div class="form-group">
+      <ion-label id="label-servicio" position="stacked">Servicio a realizar</ion-label>
+      <ion-select formControlName="servicio" placeholder="Selecciona el servicio">
+        <ion-select-option value="limpieza-bucal">Limpieza Bucal</ion-select-option>
+        <ion-select-option value="extraccion-muelas">Extracción de muelas</ion-select-option>
+        <ion-select-option value="ortodoncia">Ortodoncia</ion-select-option>
+        <ion-select-option value="implantes">Implantes</ion-select-option>
+        <ion-select-option value="bruxismo">Bruxismo</ion-select-option>
+        <ion-select-option value="blanqueamiento-dental">Blanqueamiento dental</ion-select-option>
+        <ion-select-option value="endodoncia">Endodoncia</ion-select-option>
+        <ion-select-option value="carillas-dentales">Carillas Dentales</ion-select-option>
+      </ion-select>
+    </div>
+
+    <ion-button id="submit-btn" expand="full" type="submit" [disabled]="!agendarCitaForm.valid" class="submit-btn">
+      Agendar Cita
+    </ion-button>
+
+    <ion-button id="pago-btn" expand="full" (click)="realizarPago()" class="pago-btn">
+      Realizar Pago
+    </ion-button>
+  </form>
+</ion-content>
