@@ -2,6 +2,7 @@ import { Component, ViewChild, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-registro',
@@ -10,24 +11,43 @@ import { HttpClient } from '@angular/common/http';
   standalone: false
 })
 export class RegistroPage implements OnInit {
+
   @ViewChild('registerForm') registerForm!: NgForm;
 
   email: string = '';
   password: string = '';
   confirmPassword: string = '';
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient, private alertController: AlertController) {}
 
   ngOnInit() {
 
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.registerForm.valid && this.password === this.confirmPassword) {
-      this.router.navigate(['/tabs/inicio']);
+      await this.showSuccessAlert();
+      this.router.navigate(['/login']);
       this.registerForm.reset();
     } else {
     }
+  }
+
+  async showSuccessAlert() {
+    const alert = await this.alertController.create({
+      header: 'Cuenta Creada',
+      message: 'Tu cuenta ha sido creada exitosamente. Ahora puedes iniciar sesión.',
+      buttons: [
+        {
+          text: 'Cerrar',
+          role: 'confirm',
+          cssClass: 'custom-alert-button'
+        }
+      ],
+      cssClass: 'success-alert'
+    });
+
+    await alert.present();
   }
   
   // Utiliza este código si deseas hacer una petición HTTP al servidor para registrar al usuario

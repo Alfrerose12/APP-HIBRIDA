@@ -158,3 +158,28 @@ ion-content {
 ion-button {
     margin-top: 20px;
 }
+
+.success-alert .alert-wrapper {
+    background-color: #4169A1 !important; 
+    color: white !important;
+    border-radius: 12px;
+  }
+  
+  .success-alert .alert-title {
+    color: white !important;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .success-alert .alert-message {
+    color: white !important;
+    font-size: 16px;
+  }
+  
+  .custom-alert-button {
+    color: white !important;
+    background-color: #4169A4 !important; 
+    border-radius: 8px;
+    font-weight: bold;
+  }
+  
