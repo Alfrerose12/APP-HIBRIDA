@@ -16,6 +16,14 @@ const routes: Routes = [
         loadChildren: () => import('../menu-opciones/menu-opciones.module').then( m => m.MenuOpcionesPageModule)
       },
       {
+        path: 'recomendaciones',
+        loadChildren: () => import('../recomendaciones/recomendaciones.module').then( m => m.RecomendacionesPageModule)
+      },
+      {
+        path: 'promociones',
+        loadChildren: () => import('../promociones/promociones.module').then( m => m.PromocionesPageModule)
+      },
+      {
         path: '',
         redirectTo: '/tabs/inicio',
         pathMatch: 'full'

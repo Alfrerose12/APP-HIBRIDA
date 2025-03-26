@@ -1,6 +1,11 @@
 .container {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto; /* Asegura que ocupe todo el alto disponible */
 }
 
 .title {
@@ -141,4 +146,49 @@ ion-item {
 
 .cerrar{
   color: white ;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding: 10px;
+  justify-items: center;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.boton-imagen {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.boton-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icono-boton {
+  width: 80px; /* Ajusta el tamaño de la imagen */
+  height: 80px;
+  margin-bottom: 8px; /* Espaciado entre imagen y texto */
+}
+
+.titulo-boton {
+  font-size: 16px;
+  font-weight: bold;
+}
+.historial-citas {
+  position: relative;
+  left: 100px; /* Ajusta el valor según lo necesites */
 }

@@ -38,14 +38,7 @@ const routes: Routes = [
     path: 'historial-citas',
     loadChildren: () => import('./historial-citas/historial-citas.module').then( m => m.HistorialCitasPageModule)
   },
-  {
-    path: 'recomendaciones',
-    loadChildren: () => import('./recomendaciones/recomendaciones.module').then( m => m.RecomendacionesPageModule)
-  },
-  {
-    path: 'promociones',
-    loadChildren: () => import('./promociones/promociones.module').then( m => m.PromocionesPageModule)
-  },
+  
   {
     path: 'agendar-cita',
     loadChildren: () => import('./agendar-cita/agendar-cita.module').then( m => m.AgendarCitaPageModule)
