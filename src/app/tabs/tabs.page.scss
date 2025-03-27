@@ -1,1 +1,17 @@
-
+/* filepath: /c:/Users/joaqu/OneDrive/Escritorio/TIDSM Quinto Cuatrimestre/PROYECTO INTEGRADOR YADA/APP-HIBRIDA/src/app/tabs/tabs.page.scss */
+@keyframes click-animation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .tab-button-clicked {
+    animation: click-animation 0.3s ease-in-out;
+  }
+  

@@ -50,7 +50,7 @@
 
 <ion-content id="main-content" [fullscreen]="true">
   <div class="container">
-    <img src="assets/consultorio_dental.jpg" alt="Bienvenida" class="welcome-image">
+
     <h1 class="title">Bienvenido/a a Odontología Integral</h1>
     <p class="subtitle">
       Aquí encontrarás información relevante sobre tu próxima cita y otras opciones útiles.
@@ -59,39 +59,40 @@
 
   <div class="grid-container">
     <div class="card-container">
-        <ion-card-header>
-            <ion-card-subtitle></ion-card-subtitle>
-        </ion-card-header>
-        <ion-button expand="full" color="primary" fill="clear" class="boton-imagen" routerLink="/agendar-cita">
-            <div class="boton-contenido">
-                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/dentista-8555017-6742234.png?f=webp" 
-                     alt="Icono opción 1" class="icono-boton">
-                <span class="titulo-boton">Nueva cita</span>
-            </div>
-        </ion-button>
-    </div>
-
-    <div class="card-container">
-        <ion-card-header>
-            <ion-card-subtitle></ion-card-subtitle>
-        </ion-card-header>
-        <ion-button expand="full" color="primary" fill="clear" class="boton-imagen" routerLink="/reprogramar-cita">
-            <div class="boton-contenido">
-                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/programar-cita-8094323-6478810.png?f=webp" 
-                     alt="Icono opción 2" class="icono-boton">
-                <span class="titulo-boton">Reprogramar Cita</span>
-            </div>
-        </ion-button>
-    </div>
-
-    <div class="card-container" style="text-align: center;" >
       <ion-card-header>
         <ion-card-subtitle></ion-card-subtitle>
       </ion-card-header>
-      <ion-button expand="full" color="primary" fill="clear" class="boton-imagen historial-citas" routerLink="/historial-citas">
+      <ion-button expand="full" color="primary" fill="clear" class="boton-imagen" routerLink="/agendar-cita">
         <div class="boton-contenido">
-          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/historial-del-navegador-5402850-4521463.png?f=webp" 
-             alt="Icono opción 3" class="icono-boton">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/dentista-8555017-6742234.png?f=webp"
+            alt="Icono opción 1" class="icono-boton">
+          <span class="titulo-boton">Nueva cita</span>
+        </div>
+      </ion-button>
+    </div>
+
+    <div class="card-container">
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+      </ion-card-header>
+      <ion-button expand="full" color="primary" fill="clear" class="boton-imagen" routerLink="/reprogramar-cita">
+        <div class="boton-contenido">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/programar-cita-8094323-6478810.png?f=webp"
+            alt="Icono opción 2" class="icono-boton">
+          <span class="titulo-boton">Reprogramar Cita</span>
+        </div>
+      </ion-button>
+    </div>
+
+    <div class="card-container" style="text-align: center;">
+      <ion-card-header>
+        <ion-card-subtitle></ion-card-subtitle>
+      </ion-card-header>
+      <ion-button expand="full" color="primary" fill="clear" class="boton-imagen historial-citas"
+        routerLink="/historial-citas">
+        <div class="boton-contenido">
+          <img src="https://cdn3d.iconscout.com/3d/premium/thumb/historial-del-navegador-5402850-4521463.png?f=webp"
+            alt="Icono opción 3" class="icono-boton">
           <span class="titulo-boton">Ver Historial de citas</span>
         </div>
       </ion-button>
