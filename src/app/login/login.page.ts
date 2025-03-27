@@ -21,44 +21,50 @@ export class LoginPage {
 
   async onSubmit() {
     if (this.loginForm.valid) {
-      await this.showSuccessAlert();
-      this.router.navigate(['/tabs/inicio']);
-      this.loginForm.reset();
+      const loginData = { email: this.email, password: this.password };
+  
+      try {
+        const response = await this.http.post('http://localhost:3004/api/login', loginData).toPromise();
+        this.router.navigate(['/tabs/inicio']);
+        this.loginForm.reset();
+      } catch (error) {
+        await this.showErrorAlert(error);
+      }
     } else {
-
+      await this.showValidationAlert();
     }
   }
-
-    async showSuccessAlert() {
-      const alert = await this.alertController.create({
-        header: 'Inicio de Sesión',
-        message: 'Haz iniciado sesión exitosamente.',
-        buttons: [
-          {
-            text: 'Cerrar',
-            role: 'confirm',
-            cssClass: 'custom-alert-button'
-          }
-        ],
-        cssClass: 'success-alert'
-      });
-
-      await alert.present();
+  
+  async showErrorAlert(error: any) {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      message: 'Hubo un problema al iniciar sesión. Por favor, verifica tus credenciales e inténtalo de nuevo.',
+      buttons: ['OK'],
+      cssClass: 'error-alert'
+    });
+  
+    await alert.present();
+  }
+  
+  async showValidationAlert() {
+    const alert = await this.alertController.create({
+      header: 'Formulario Inválido',
+      message: 'Por favor, completa todos los campos correctamente.',
+      buttons: ['OK'],
+      cssClass: 'validation-alert'
+    });
+  
+    await alert.present();
   }
 
-  // Usar este código si se va a hacer una petición HTTP al servidor para iniciar sesión
-  // onSubmit() {
+  // Usar este código si solo se quiere mostrar una alerta de éxito al iniciar sesión
+  // async onSubmit() {
   //   if (this.loginForm.valid) {
-  //     const loginData = { email: this.email, password: this.password };
+  //     await this.showSuccessAlert();
+  //     this.router.navigate(['/tabs/inicio']);
+  //     this.loginForm.reset();
+  //   } else {
 
-  //     this.http.post('https://odontologia-integral.site/api/login', loginData).subscribe({
-  //       next: (response) => {
-  //         this.router.navigate(['/tabs/inicio']);
-  //         this.loginForm.reset();
-  //       },
-  //       error: (err) => {
-  //       }
-  //     });
   //   }
   // }
 }
