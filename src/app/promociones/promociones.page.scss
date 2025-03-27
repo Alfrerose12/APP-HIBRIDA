@@ -1,0 +1,69 @@
+.ofertas {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    background: none;
+  
+    .Titulo {
+      color: #2c3e50;
+      font-size: 20px; // Tamaño de fuente más pequeño para el título
+      font-weight: bold;
+      margin-bottom: 15px;
+      background: none;
+    }
+  
+    .imagenes-ofertas {
+      display: flex;
+      justify-content: center;
+      gap: 15px; // Menos espacio entre las tarjetas
+      background: none;
+  
+      ion-card {
+        width: 150px; // Reducir el tamaño de las tarjetas
+        border-radius: 8px; // Radio de bordes más pequeño
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Sombra más sutil
+        transition: transform 0.2s ease-in-out;
+        background: none;
+  
+        &:hover {
+          transform: scale(1.05);
+        }
+  
+        img {
+          width: 100%;
+          height: 90px; // Tamaño reducido de las imágenes
+          object-fit: cover;
+          border-radius: 8px 8px 0 0;
+          background: none;
+        }
+  
+        ion-card-header {
+          
+          text-align: center;
+          font-weight: bold;
+          color: #2c3e50;
+          background: none;
+          font-size: 12px; // Reducir el tamaño del título de la card
+          font-family: 'Arial', sans-serif;
+        }
+  
+        ion-card-content {
+          font-size: 8px; // Tamaño más pequeño para el contenido
+          color: #032b2e;
+          background: none;
+          font-family: 'Arial', sans-serif;
+          text-align: center;
+          line-height: 1.4;
+        }
+  
+        ion-card-title {
+          color: #032b2e;
+          font-size: 12px; // Reducir el tamaño del título dentro de la tarjeta
+          text-transform: uppercase;
+          font-weight: 600;
+          background: none;
+        }
+      }
+    }
+  }
+  

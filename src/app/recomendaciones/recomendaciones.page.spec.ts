@@ -15,3 +15,4 @@ describe('RecomendacionesPage', () => {
     expect(component).toBeTruthy();
   });
 });
+

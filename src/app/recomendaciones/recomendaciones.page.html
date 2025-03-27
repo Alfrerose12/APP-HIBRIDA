@@ -7,10 +7,89 @@
       <img src="assets/logo_od.png" alt="Logo de la empresa">
     </ion-buttons>
     <ion-title>Recomendaciones</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <p>Aquí te damos recomendaciones para cuidar tu salud bucal.</p>
-  <!-- Agregar recomendaciones personalizadas aquí -->
+<ion-content class="recomendaciones">
+  <div class="consejos">
+    <h2>Consejos para una Buena Salud Bucodental</h2>
+    <ion-list>
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://cdn-icons-png.flaticon.com/512/3633/3633526.png" alt="Cepillado de dientes"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Cepillado regular y adecuado</h2>
+          <p>Cepíllate los dientes durante 3-4 minutos, al menos dos veces al día, preferiblemente después de cada comida.</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://cdn-icons-png.flaticon.com/512/2818/2818305.png" alt="Hilo dental"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Uso diario de hilo dental</h2>
+          <p>Elimina residuos de comida en los espacios donde el cepillo no llega fácilmente.</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://images.ctfassets.net/t2436bmmnhys/1GmKBQucTJg6aLK4Z8q8yc/d9901b9c203407596ce7b32f2b8e143a/MicrosoftTeams-image__4_.png" alt="Cepillo eléctrico"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Uso de cepillos eléctricos</h2>
+          <p>Son más eficaces en la eliminación de placa bacteriana comparados con los manuales.</p>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-thumbnail slot="start">
+          <img src="https://cdn-icons-png.flaticon.com/512/4310/4310157.png" alt="Dieta saludable"/>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Dieta equilibrada</h2>
+          <p>Evita azúcares y comidas procesadas para reducir el riesgo de caries.</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-list>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://www.pngarts.com/files/1/Colgate-PNG-Image-1.png" alt="Pasta para dientes"/>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Colgate Total</h2>
+        <p>Protección completa para dientes y encías.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://images.ctfassets.net/m9qku1qrfhc5/2005nuM2QlALVPcR34QuZL/3f4ce7d093d616af9868c508ae5f424a/listerine-coolmint-500ml-front-es-ec" alt="Enjuague Bucal"/>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Enjuague Bucal Listerine</h2>
+        <p>Elimina bacterias y deja un aliento fresco.</p>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/parodontax-v3/es_ES/2024-packshots-555x555/Parodontax_Meerkat_Extra%20%20Fresh__AWA_Banners_Other_0s_es_ESP_555x555.png?auto=format" alt="Pasta paradontax"/>
+      </ion-thumbnail>
+      <ion-label>
+        <h2>Pasta Parodontax</h2>
+        <p>Ayuda a prevenir el sangrado de encías.</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+
 </ion-content>
