@@ -38,11 +38,16 @@ const routes: Routes = [
     path: 'historial-citas',
     loadChildren: () => import('./historial-citas/historial-citas.module').then( m => m.HistorialCitasPageModule)
   },
-  
+
   {
     path: 'agendar-cita',
     loadChildren: () => import('./agendar-cita/agendar-cita.module').then( m => m.AgendarCitaPageModule)
+  },
+  {
+    path: 'administrar-cita',
+    loadComponent: () => import('./administrar-cita/administrar-cita.page').then(m => m.AdministrarCitaPage)
   }
+
 ];
 @NgModule({
   imports: [

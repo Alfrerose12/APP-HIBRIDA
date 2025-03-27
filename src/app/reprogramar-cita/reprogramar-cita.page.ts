@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   selector: 'app-reprogramar-cita',
   templateUrl: './reprogramar-cita.page.html',
   styleUrls: ['./reprogramar-cita.page.scss'],
-  standalone: false
+  standalone: false, // Si usas Angular standalone, cámbialo a true
 })
 export class ReprogramarCitaPage implements OnInit {
   
@@ -43,8 +43,10 @@ export class ReprogramarCitaPage implements OnInit {
       });
 
       await alert.present();
-    } else {
-      
     }
+  }
+
+  administrarCita() {
+    this.router.navigate(['/administrar-cita']); // Redirige a la nueva página de administración de citas
   }
 }

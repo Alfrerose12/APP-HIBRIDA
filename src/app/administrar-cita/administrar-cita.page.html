@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/tabs/inicio']">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+      <img src="assets/logo_od.png" alt="Logo de la empresa" class="logo-header">
+    </ion-buttons>
+    <ion-title>Administrar Cita</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Detalles de la Cita</h2>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>Fecha y Hora:</ion-label>
+      <ion-note>{{ cita.fechaHora }}</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label>Motivo:</ion-label>
+      <ion-note>{{ cita.motivo }}</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="primary" expand="full" [routerLink]="['/reprogramar-cita']">
+    Reprogramar Cita
+  </ion-button>
+
+  <ion-button color="danger" expand="full" (click)="cancelarCita()">
+    Cancelar Cita
+  </ion-button>
+</ion-content>

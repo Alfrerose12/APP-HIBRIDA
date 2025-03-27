@@ -4,8 +4,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';  // Importar 
 import { IonicModule } from '@ionic/angular';
 
 import { ReprogramarCitaPageRoutingModule } from './reprogramar-cita-routing.module';
-
+ 
 import { ReprogramarCitaPage } from './reprogramar-cita.page';
+
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { ReprogramarCitaPage } from './reprogramar-cita.page';
     FormsModule,
     ReactiveFormsModule,
     IonicModule,
-    ReprogramarCitaPageRoutingModule
+    ReprogramarCitaPageRoutingModule,
+
   ],
   declarations: [ReprogramarCitaPage]
 })
