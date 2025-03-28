@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { AuthGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -9,19 +10,18 @@ const routes: Routes = [
     children: [
       {
         path: 'inicio',
-        loadChildren: () => import('../inicio/inicio.module').then( m => m.InicioPageModule)
-      },
-      {
-        path: 'menu-opciones',
-        loadChildren: () => import('../menu-opciones/menu-opciones.module').then( m => m.MenuOpcionesPageModule)
+        loadChildren: () => import('../inicio/inicio.module').then( m => m.InicioPageModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'recomendaciones',
-        loadChildren: () => import('../recomendaciones/recomendaciones.module').then( m => m.RecomendacionesPageModule)
+        loadChildren: () => import('../recomendaciones/recomendaciones.module').then( m => m.RecomendacionesPageModule),
+        canActivate: [AuthGuard]
       },
       {
         path: 'promociones',
-        loadChildren: () => import('../promociones/promociones.module').then( m => m.PromocionesPageModule)
+        loadChildren: () => import('../promociones/promociones.module').then( m => m.PromocionesPageModule),
+        canActivate: [AuthGuard]
       },
       {
         path: '',

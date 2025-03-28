@@ -3,82 +3,90 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding-top: 8vh;
-    gap: 15px;
-}
-
-.logo-container {
+    padding: 20px;
+    gap: 20px;
+    background-color: #f9f9f9; /* Fondo claro */
+    min-height: 100vh; /* Asegura que ocupe toda la altura de la pantalla */
+    box-sizing: border-box; /* Incluye padding en el cálculo del tamaño */
+  }
+  
+  .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-}
-
-ion-img {
-    width: 160px;
+    margin-bottom: 20px;
+  }
+  
+  ion-img {
+    width: 120px;
     height: auto;
     margin-bottom: 10px;
-}
-
-.main-title {
-    font-size: 1.4rem;
-    color: black;
-}
-
-.subtitle {
+  }
+  
+  .main-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff; /* Azul */
+    margin-bottom: 5px;
+  }
+  
+  .subtitle {
     font-size: 1rem;
-    color: black;
-}
-
-.form-container {
+    color: #666; /* Gris oscuro */
+  }
+  
+  .form-card {
+    margin-top: -30px;
     width: 100%;
-    max-width: 320px;
-    background-color: #ffffff; 
-    border-radius: 10px; 
-    padding: 8px;
-}
-
-.input-group {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.input-label {
+    max-width: 400px;
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Asegura que el padding no desborde */
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-label {
     font-size: 14px;
     font-weight: bold;
-    color: black; 
-    margin-top: 5px;
+    color: #333; /* Gris oscuro */
     margin-bottom: 5px;
-    display: block;
-    text-align: center;
-}
-
-ion-item {
-    --background: transparent;
-    --inner-border-width: 0;
-}
-
-ion-button {
+  }
+  
+  ion-item {
+    --background: #f0f0f0; /* Fondo gris claro */
+    --border-radius: 8px;
+    --padding-start: 10px;
+  }
+  
+  ion-input {
+    color: #333; /* Texto gris oscuro */
+    text-align: left;
+  }
+  
+  .submit-button {
+    background-color: #007bff; /* Azul */
+    color: #fff; /* Blanco */
+    font-weight: bold;
+    border-radius: 8px;
+    margin-top: 15px;
     width: 100%;
-    max-width: 320px;
-    margin-top: 10px;
-}
-
-.register-text {
+  }
+  
+  .register-text {
     font-size: 0.9rem;
-    color: gray;
+    color: #666; /* Gris oscuro */
     text-align: center;
-    margin-top: 10px;
-}
-
-.register-text a {
-    color: #007bff;
+    margin-top: 15px;
+  }
+  
+  .register-text a {
+    color: #007bff; /* Azul */
     text-decoration: none;
     font-weight: bold;
-}
-
-ion-input {
-    background-color: lightgrey;
-    text-align: center;
-    color: black;
-}
+  }
